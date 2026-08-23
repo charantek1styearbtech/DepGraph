@@ -35,14 +35,13 @@ afterAll(async () => {
 });
 
 describe.skipIf(!online)("query layer (live CognoDB)", () => {
-  it("dashboard stats reflect the seeded graph", async () => {
+  it("dashboard stats reflect the pruned + imported graph", async () => {
     const stats = await getDashboardStats();
-    // Imports grow the graph, so exact equality only holds on a fresh seed.
-    expect(stats.projects).toBeGreaterThanOrEqual(20);
+    expect(stats.projects).toBeGreaterThanOrEqual(3);
     expect(stats.packages).toBeGreaterThanOrEqual(100);
     expect(stats.vulnerabilities).toBe(36);
     expect(stats.relationships).toBeGreaterThan(800);
-    expect(stats.affectedProjects).toBeGreaterThan(5);
+    expect(stats.affectedProjects).toBeGreaterThanOrEqual(1);
   });
 
   it("project lookup returns ShopStack with counts", async () => {
@@ -76,16 +75,16 @@ describe.skipIf(!online)("query layer (live CognoDB)", () => {
     expect(last.version).toBe("4.17.21");
   });
 
-  it("impact analyzer reports patched pins as unaffected", async () => {
-    // CloudPilot pins lodash ^4.17.23 — the vulnerable release is unreachable
-    // through its own pin, but next still drags 4.17.21 in, so use GridStudio
-    // whose recharts@2.12.7 dropped the vulnerable pin.
-    const impact = await impactOfVulnerability("gridstudio", FLAGSHIP_CVE);
+  it("impact analyzer reports a real imported clean repo as unaffected", async () => {
+    const impact = await impactOfVulnerability(
+      "charantek1styearbtech--terminal-mcp",
+      FLAGSHIP_CVE,
+    );
     expect(impact.affected).toBe(false);
   });
 
-  it("path finder returns multiple distinct lodash routes for DataForge", async () => {
-    const result = await findDependencyPaths("dataforge", "lodash");
+  it("path finder returns multiple distinct lodash routes for ShopStack", async () => {
+    const result = await findDependencyPaths("shopstack", "lodash");
     expect(result.paths.length).toBeGreaterThanOrEqual(2);
     const signatures = result.paths.map((p) =>
       p.steps.map((s) => s.id).join(">"),
@@ -93,11 +92,13 @@ describe.skipIf(!online)("query layer (live CognoDB)", () => {
     expect(new Set(signatures).size).toBe(signatures.length);
   });
 
-  it("reverse dependents finds direct and transitive lodash consumers", async () => {
+  it("reverse dependents finds transitive lodash consumers (pruned graph)", async () => {
     const dependents = await findDependents("lodash");
-    expect(dependents.total).toBeGreaterThanOrEqual(7);
-    expect(dependents.directCount).toBeGreaterThan(0);
-    expect(dependents.transitiveCount).toBeGreaterThan(0);
+    expect(dependents.total).toBeGreaterThanOrEqual(1);
+    // After pruning to ShopStack + imported repos, no project declares lodash
+    // directly — so directCount should be 0 and all exposure is transitive.
+    expect(dependents.directCount).toBe(0);
+    expect(dependents.transitiveCount).toBe(dependents.total);
   });
 
   it("package detail exposes versions, deps and advisories", async () => {
