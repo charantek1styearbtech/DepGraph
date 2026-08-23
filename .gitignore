@@ -34,3 +34,6 @@ yarn-error.log*
 
 # typescript (project is plain JavaScript; jsconfig only)
 *.tsbuildinfo
+
+#logs
+dev-server.log
