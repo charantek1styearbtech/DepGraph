@@ -21,6 +21,10 @@ tests, and this README. Plain JavaScript throughout (no TypeScript).
 
 **[Open DepGraph →](https://depgraph-tqa1.onrender.com)**
 
+#### Video demo
+
+[![Watch the demo](https://img.youtube.com/vi/NEyoGOVgZXg/0.jpg)](https://youtu.be/NEyoGOVgZXg)
+
 > The demo dataset uses synthetic `CVE-DEMO-*` advisories to demonstrate graph traversal and
 > vulnerability impact analysis. No real vulnerability data.
 
@@ -67,22 +71,22 @@ Project ──DIRECT_DEPENDS_ON──▶ Package ──HAS_VERSION──▶ Vers
 ## Architecture
 
 ```text
-┌─────────────────────────────── Browser ───────────────────────────────[...]
+┌─────────────────────────────── Browser ──────────────────────────────�[...]
 │  Next.js App Router (React 19)                                            │
 │   • Server Components read via lib/queries/* (never lib/db directly)      │
 │   • Client components (Explorer, Analyzer, Search…) call REST APIs        │
 │   • React Flow canvas · shadcn-style UI · Tailwind v4 · Lucide            │
-└───────────────┬───────────────────────────────────────┬─────────[...]
+└───────────────┬───────────────────────────────────────┬────────�[...]
                 │ fetch /api/*                          │ RSC data calls
-┌───────────────▼───────────────────────────────────────▼─────────[...]
+┌───────────────▼───────────────────────────────────────▼────────�[...]
 │  Route Handlers (app/api/*)          lib/queries/*                        │
 │   validation · error mapping          traversal.js (BFS engine)           │
 │   = thin HTTP shells                  dependencies.js (impact/paths)      │
 │                                       dashboard/projects/packages/…       │
-├─────────────────────────────────────────────────────────────────[...]
+├────────────────────────────────────────────────────────────────�[...]
 │  lib/db.js — neo4j-driver singleton                                       │
 │   parameterized sessions · RETURN 1 health probe · typed error mapping    │
-└───────────────────────────────┬────────────────────────────────[...]
+└───────────────────────────────┬────────────────────────────────[[...]
                                 │ Bolt (bolt+s://)
                     ┌───────────▼────────────┐
                     │        CognoDB         │
