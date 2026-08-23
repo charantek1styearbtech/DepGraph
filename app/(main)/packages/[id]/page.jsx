@@ -167,9 +167,9 @@ function PackageDetailInner() {
             <EmptyState icon={Boxes} title="No runtime dependencies" message="This release is a leaf package." />
           ) : (
             <div className="grid gap-2 sm:grid-cols-2">
-              {data.dependencies.map((dep) => (
+              {data.dependencies.map((dep, index) => (
                 <Link
-                  key={dep.id}
+                  key={`${dep.id}-${index}`}
                   href={`/packages/${encodeURIComponent(dep.id)}`}
                   className="flex items-center justify-between rounded-lg border p-3 text-sm transition-colors hover:bg-accent"
                 >
