@@ -241,11 +241,14 @@ pagination/filtering, search.
 
 ## Screenshots
 
-Placeholders — drop PNGs into `public/screenshots/` and they slot straight in:
 
+Dashboard
 ![Dashboard](public/screenshots/dashboard.png)
+Dependency Explorer
 ![Dependency Explorer](public/screenshots/explorer.png)
+Vulnerability Analyzer
 ![Impact Analyzer](public/screenshots/analyzer.png)
+Reverse Graph
 ![Package page](public/screenshots/package.png)
 
 ## Deployment
@@ -257,7 +260,7 @@ inside function limits.
 
 ## Demo
 
-Hosted URL: `_add your Vercel link here_`
+Hosted URL: `https://depgraph-tqa1.onrender.com`
 
 ## Project structure
 
