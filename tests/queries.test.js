@@ -37,8 +37,9 @@ afterAll(async () => {
 describe.skipIf(!online)("query layer (live CognoDB)", () => {
   it("dashboard stats reflect the seeded graph", async () => {
     const stats = await getDashboardStats();
-    expect(stats.projects).toBe(20);
-    expect(stats.packages).toBeGreaterThan(100);
+    // Imports grow the graph, so exact equality only holds on a fresh seed.
+    expect(stats.projects).toBeGreaterThanOrEqual(20);
+    expect(stats.packages).toBeGreaterThanOrEqual(100);
     expect(stats.vulnerabilities).toBe(36);
     expect(stats.relationships).toBeGreaterThan(800);
     expect(stats.affectedProjects).toBeGreaterThan(5);
