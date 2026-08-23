@@ -17,6 +17,15 @@ tests, and this README. Plain JavaScript throughout (no TypeScript).
 
 ---
 
+## 🚀 Live Demo
+
+**[Open DepGraph →](https://depgraph-tqa1.onrender.com)**
+
+> The demo dataset uses synthetic `CVE-DEMO-*` advisories to demonstrate graph traversal and
+> vulnerability impact analysis. No real vulnerability data.
+
+---
+
 ## The problem
 
 Modern applications depend on hundreds of packages, which depend on other packages, which
@@ -58,22 +67,22 @@ Project ──DIRECT_DEPENDS_ON──▶ Package ──HAS_VERSION──▶ Vers
 ## Architecture
 
 ```text
-┌─────────────────────────────── Browser ───────────────────────────────────┐
+┌─────────────────────────────── Browser ───────────────────────────────[...]
 │  Next.js App Router (React 19)                                            │
 │   • Server Components read via lib/queries/* (never lib/db directly)      │
 │   • Client components (Explorer, Analyzer, Search…) call REST APIs        │
 │   • React Flow canvas · shadcn-style UI · Tailwind v4 · Lucide            │
-└───────────────┬───────────────────────────────────────┬───────────────────┘
+└───────────────┬───────────────────────────────────────┬─────────[...]
                 │ fetch /api/*                          │ RSC data calls
-┌───────────────▼───────────────────────────────────────▼───────────────────┐
+┌───────────────▼───────────────────────────────────────▼─────────[...]
 │  Route Handlers (app/api/*)          lib/queries/*                        │
 │   validation · error mapping          traversal.js (BFS engine)           │
 │   = thin HTTP shells                  dependencies.js (impact/paths)      │
 │                                       dashboard/projects/packages/…       │
-├───────────────────────────────────────────────────────────────────────────┤
+├─────────────────────────────────────────────────────────────────[...]
 │  lib/db.js — neo4j-driver singleton                                       │
 │   parameterized sessions · RETURN 1 health probe · typed error mapping    │
-└───────────────────────────────┬───────────────────────────────────────────┘
+└───────────────────────────────┬────────────────────────────────[...]
                                 │ Bolt (bolt+s://)
                     ┌───────────▼────────────┐
                     │        CognoDB         │
@@ -239,28 +248,36 @@ and skip, so CI stays green offline. Covered: project lookup, transitive travers
 analysis (affected *and* patched-pin cases), multi-path finding, reverse dependents,
 pagination/filtering, search.
 
-## Screenshots
+## 📸 Screenshots
 
+### Dashboard
+![DepGraph Dashboard](public/screenshots/dashboard.png)
 
-Dashboard
-![Dashboard](public/screenshots/dashboard.png)
-Dependency Explorer
-![Dependency Explorer](public/screenshots/explorer.png)
-Vulnerability Analyzer
-![Impact Analyzer](public/screenshots/analyzer.png)
-Reverse Graph
-![Package page](public/screenshots/package.png)
+### Dependency Graph Explorer
+![Dependency Graph Explorer](public/screenshots/explorer.png)
+
+### Vulnerability Impact Analyzer
+![Vulnerability Impact Analyzer](public/screenshots/analyzer.png)
+
+### Reverse Dependency Analysis
+![Reverse Dependency Analysis](public/screenshots/package.png)
 
 ## Deployment
 
-DepGraph is a standard Next.js app — deploy to Vercel and add the environment variables
-(`COGNODB_URI`, `COGNODB_USERNAME`, `COGNODB_PASSWORD`) in the project settings. No serverless
-quirks: all database access happens in Route Handlers / RSC with short-lived sessions, well
-inside function limits.
+DepGraph is a standard Next.js application deployable to any Node-compatible platform.
 
-## Demo
+**Current production deployment:** https://depgraph-tqa1.onrender.com (hosted on Render)
 
-Hosted URL: `https://depgraph-tqa1.onrender.com`
+### Environment variables
+
+```env
+COGNODB_URI=
+COGNODB_USERNAME=cognodb
+COGNODB_PASSWORD=
+```
+
+Database credentials are read **server-side only** (`lib/db.js`); nothing database-related reaches
+the browser bundle, and `.env*.local` is git-ignored.
 
 ## Project structure
 
@@ -283,12 +300,37 @@ Hosted URL: `https://depgraph-tqa1.onrender.com`
 └── README.md
 ```
 
-## Scope notes
+## Scope & Demo Data
 
-Deliberately excluded per assignment: auth, teams, billing, private-repo OAuth, npm registry
-mirroring, AI features. All advisories are clearly labelled `CVE-DEMO-*` fiction generated for
-this dataset — never presented as real vulnerability data.
+DepGraph is focused on dependency graph modeling, traversal, and vulnerability impact analysis
+for a technical assessment.
 
-MIT licensed.
+### Demo vulnerability data
 
+All vulnerabilities in the seed dataset are labeled `CVE-DEMO-*` and are **synthetic demonstration
+records**, not real CVEs or production vulnerability intelligence.
 
+They exist to demonstrate:
+
+- Vulnerability impact analysis across dependency chains
+- Direct vs transitive dependency analysis
+- Multi-hop dependency traversal
+- Reverse dependency analysis
+- Affected vs unaffected package versions based on pinned versions
+
+When you import a real project into DepGraph, it is evaluated against these demo advisories.
+**Any match should be interpreted as a demonstration of the analysis pipeline, not as confirmation
+of a real-world vulnerability.**
+
+### Deliberately excluded
+
+- Authentication & teams
+- Billing
+- Private-repository OAuth
+- NPM registry mirroring
+- AI-based analysis
+- Production vulnerability feeds
+
+## License
+
+MIT
