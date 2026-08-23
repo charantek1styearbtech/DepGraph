@@ -309,6 +309,20 @@ the browser bundle, and `.env*.local` is git-ignored.
 DepGraph is focused on dependency graph modeling, traversal, and vulnerability impact analysis
 for a technical assessment.
 
+### Demo Vulnerability Detail Pages
+
+The `CVE-DEMO-*` advisories included in the seed dataset are synthetic
+demonstration records used to exercise dependency traversal and
+vulnerability-impact workflows.
+
+Some demo advisory IDs may not have a standalone vulnerability-detail
+record in the graph database. Navigating directly to such an advisory's
+detail URL may therefore display a `Database unavailable` / `data
+unavailable` state.
+
+This does not affect the primary demonstration workflow, where the demo
+advisory is reached through the project's dependency graph and analyzed
+as part of the vulnerability-impact workflow.
 ### Demo vulnerability data
 
 All vulnerabilities in the seed dataset are labeled `CVE-DEMO-*` and are **synthetic demonstration
