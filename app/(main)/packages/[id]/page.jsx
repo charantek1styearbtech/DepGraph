@@ -46,12 +46,14 @@ function PackageDetailInner() {
   }, [packageId]);
 
   React.useEffect(() => {
-    if (data?.stats?.dependentVersions === undefined) return;
+    // Fire once package metadata is in — do NOT gate on a specific stat field:
+    // an engine quirk previously left stats empty and silently skipped this.
+    if (!data) return;
     fetch(`/api/packages/${encodeURIComponent(packageId)}/dependents`)
       .then((res) => (res.ok ? res.json() : Promise.reject(new Error("failed"))))
       .then(setDependents)
       .catch(() => setDependents(null));
-  }, [packageId, data?.stats?.dependentVersions]);
+  }, [packageId, data]);
 
   if (failed) {
     return (
