@@ -1,0 +1,829 @@
+
+> depgraph@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.23
+   - Local:        http://localhost:3001
+   - Network:      http://172.30.32.1:3001
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3.3s
+ ○ Compiling /api/health ...
+ ✓ Compiled /api/health in 690ms (664 modules)
+ GET /api/health 200 in 2273ms
+ ○ Compiling /api/packages/[id] ...
+ ✓ Compiled /api/packages/[id] in 1126ms (682 modules)
+ GET /api/packages/lodash 200 in 6379ms
+ ✓ Compiled in 241ms (487 modules)
+ GET /api/packages/lodash 200 in 4053ms
+ GET /api/packages/next 200 in 1420ms
+ ○ Compiling /packages/[id] ...
+ ✓ Compiled /packages/[id] in 2.6s (707 modules)
+ ✓ Compiled in 415ms (285 modules)
+ ✓ Compiled in 180ms (285 modules)
+ ✓ Compiled in 185ms (285 modules)
+ ✓ Compiled in 819ms (285 modules)
+ GET /packages/lodash 200 in 4284ms
+ ✓ Compiled in 238ms (285 modules)
+ ✓ Compiled in 204ms (285 modules)
+ ✓ Compiled in 203ms (285 modules)
+ ✓ Compiled in 183ms (285 modules)
+ ✓ Compiled in 166ms (285 modules)
+ ✓ Compiled in 177ms (285 modules)
+ ✓ Compiled in 180ms (285 modules)
+ ✓ Compiled in 169ms (285 modules)
+ ✓ Compiled in 180ms (285 modules)
+ ✓ Compiled in 185ms (285 modules)
+ ✓ Compiled in 150ms (285 modules)
+ ✓ Compiled in 164ms (285 modules)
+ ✓ Compiled in 189ms (285 modules)
+ ○ Compiling /api/packages/[id] ...
+ ✓ Compiled /api/packages/[id] in 860ms (1109 modules)
+ ✓ Compiled in 990ms (285 modules)
+ GET /packages/lodash 200 in 1864ms
+ ✓ Compiled in 256ms (285 modules)
+ ✓ Compiled in 303ms (285 modules)
+ GET /packages/lodash 200 in 536ms
+ ✓ Compiled in 235ms (285 modules)
+ ✓ Compiled in 296ms (285 modules)
+ GET /packages/lodash 200 in 517ms
+ ✓ Compiled in 194ms (285 modules)
+ ✓ Compiled in 263ms (285 modules)
+ GET /packages/lodash 200 in 513ms
+ ✓ Compiled in 297ms (285 modules)
+ ✓ Compiled in 244ms (285 modules)
+ GET /packages/lodash 200 in 480ms
+ ✓ Compiled in 124ms (285 modules)
+ GET /packages/lodash 200 in 262ms
+ ✓ Compiled in 156ms (285 modules)
+ ✓ Compiled in 128ms (285 modules)
+ GET /packages/lodash 200 in 291ms
+ ✓ Compiled in 172ms (285 modules)
+ ✓ Compiled in 109ms (285 modules)
+ GET /packages/lodash 200 in 250ms
+ ✓ Compiled in 150ms (285 modules)
+ ✓ Compiled in 114ms (285 modules)
+ ✓ Compiled in 145ms (285 modules)
+ GET /packages/lodash 200 in 237ms
+ ✓ Compiled in 116ms (285 modules)
+ GET /api/packages/lodash 200 in 5335ms
+ ✓ Compiled in 212ms (285 modules)
+ GET /packages/lodash 200 in 326ms
+ ○ Compiling /api/packages/[id]/dependents ...
+ ✓ Compiled /api/packages/[id]/dependents in 622ms (1113 modules)
+ ✓ Compiled in 424ms (285 modules)
+ GET /packages/lodash 200 in 1048ms
+ ✓ Compiled in 139ms (285 modules)
+ ✓ Compiled in 170ms (285 modules)
+ GET /packages/lodash 200 in 203ms
+ ✓ Compiled in 129ms (285 modules)
+ ✓ Compiled in 211ms (285 modules)
+ GET /packages/lodash 200 in 338ms
+ ✓ Compiled in 148ms (285 modules)
+ ✓ Compiled in 197ms (285 modules)
+ GET /packages/lodash 200 in 282ms
+ ✓ Compiled in 159ms (285 modules)
+ ✓ Compiled in 169ms (285 modules)
+ GET /packages/lodash 200 in 222ms
+ ✓ Compiled in 143ms (285 modules)
+ ✓ Compiled in 205ms (285 modules)
+ GET /packages/lodash 200 in 331ms
+ ✓ Compiled in 183ms (285 modules)
+ ✓ Compiled in 199ms (285 modules)
+ GET /packages/lodash 200 in 377ms
+ ✓ Compiled in 160ms (285 modules)
+ GET /packages/lodash 200 in 326ms
+ ✓ Compiled in 193ms (285 modules)
+ ✓ Compiled in 115ms (285 modules)
+ GET /packages/lodash 200 in 283ms
+ ✓ Compiled in 186ms (285 modules)
+ ✓ Compiled in 135ms (285 modules)
+ GET /packages/lodash 200 in 299ms
+ ✓ Compiled in 181ms (285 modules)
+ ✓ Compiled in 127ms (285 modules)
+ GET /packages/lodash 200 in 275ms
+ ✓ Compiled in 154ms (285 modules)
+ ✓ Compiled in 105ms (285 modules)
+ GET /packages/lodash 200 in 236ms
+ ✓ Compiled in 149ms (285 modules)
+ ✓ Compiled in 101ms (285 modules)
+ GET /packages/lodash 200 in 258ms
+ ✓ Compiled in 175ms (285 modules)
+ ✓ Compiled in 131ms (285 modules)
+ GET /packages/lodash 200 in 311ms
+ ✓ Compiled in 194ms (285 modules)
+ GET /packages/lodash 200 in 279ms
+ ○ Compiling /api/health ...
+ ✓ Compiled /api/health in 732ms (1115 modules)
+ GET /api/packages/lodash/dependents 200 in 6228ms
+ ✓ Compiled in 317ms (285 modules)
+ GET /packages/lodash 200 in 709ms
+ ✓ Compiled in 125ms (285 modules)
+ GET /packages/lodash 200 in 261ms
+ ✓ Compiled in 164ms (285 modules)
+ ✓ Compiled in 124ms (285 modules)
+ GET /packages/lodash 200 in 247ms
+ ✓ Compiled in 141ms (285 modules)
+ ✓ Compiled in 169ms (285 modules)
+ GET /packages/lodash 200 in 175ms
+ ✓ Compiled in 102ms (285 modules)
+ ✓ Compiled in 130ms (285 modules)
+ GET /packages/lodash 200 in 171ms
+ ✓ Compiled in 110ms (285 modules)
+ GET /api/health 200 in 2198ms
+ GET /packages/lodash 200 in 219ms
+ ✓ Compiled in 136ms (285 modules)
+ ✓ Compiled in 135ms (285 modules)
+ GET /packages/lodash 200 in 285ms
+ ✓ Compiled in 173ms (285 modules)
+ ✓ Compiled in 173ms (285 modules)
+ GET /packages/lodash 200 in 207ms
+ ✓ Compiled in 139ms (285 modules)
+ ✓ Compiled in 174ms (285 modules)
+ GET /packages/lodash 200 in 278ms
+ ✓ Compiled in 173ms (285 modules)
+ ✓ Compiled in 138ms (285 modules)
+ GET /packages/lodash 200 in 284ms
+ ✓ Compiled in 115ms (285 modules)
+ GET /packages/lodash 200 in 256ms
+ ✓ Compiled in 163ms (285 modules)
+ ✓ Compiled in 132ms (285 modules)
+ ✓ Compiled in 163ms (285 modules)
+ GET /packages/lodash 200 in 296ms
+ ✓ Compiled in 102ms (285 modules)
+ GET /packages/lodash 200 in 232ms
+ ✓ Compiled in 146ms (285 modules)
+ ✓ Compiled in 107ms (285 modules)
+ GET /packages/lodash 200 in 228ms
+ ✓ Compiled in 137ms (285 modules)
+ ✓ Compiled in 120ms (285 modules)
+ GET /packages/lodash 200 in 249ms
+ ✓ Compiled in 147ms (285 modules)
+ ✓ Compiled in 120ms (285 modules)
+ GET /packages/lodash 200 in 246ms
+ ✓ Compiled in 144ms (285 modules)
+ ✓ Compiled in 95ms (285 modules)
+ GET /packages/lodash 200 in 221ms
+ ✓ Compiled in 141ms (285 modules)
+ ✓ Compiled in 102ms (285 modules)
+ GET /packages/lodash 200 in 219ms
+ ✓ Compiled in 131ms (285 modules)
+ ✓ Compiled in 106ms (285 modules)
+ GET /packages/lodash 200 in 237ms
+ ✓ Compiled in 146ms (285 modules)
+ ✓ Compiled in 108ms (285 modules)
+ GET /packages/lodash 200 in 235ms
+ ✓ Compiled in 143ms (285 modules)
+ ✓ Compiled in 122ms (285 modules)
+ GET /packages/lodash 200 in 135ms
+ ✓ Compiled in 104ms (285 modules)
+ ✓ Compiled in 129ms (285 modules)
+ GET /packages/lodash 200 in 224ms
+ ✓ Compiled in 107ms (285 modules)
+ ✓ Compiled in 132ms (285 modules)
+ GET /packages/lodash 200 in 227ms
+ ✓ Compiled in 116ms (285 modules)
+ GET /packages/lodash 200 in 233ms
+ ✓ Compiled in 134ms (285 modules)
+ ✓ Compiled in 109ms (285 modules)
+ GET /packages/lodash 200 in 229ms
+ ✓ Compiled in 136ms (285 modules)
+ ✓ Compiled in 104ms (285 modules)
+ GET /packages/lodash 200 in 233ms
+ ✓ Compiled in 151ms (285 modules)
+ ✓ Compiled in 113ms (285 modules)
+ GET /packages/lodash 200 in 246ms
+ ✓ Compiled in 151ms (285 modules)
+ ✓ Compiled in 104ms (285 modules)
+ GET /packages/lodash 200 in 258ms
+ ✓ Compiled in 166ms (285 modules)
+ ✓ Compiled in 213ms (285 modules)
+ GET /packages/lodash 200 in 232ms
+ ✓ Compiled in 96ms (285 modules)
+ ✓ Compiled in 173ms (285 modules)
+ GET /packages/lodash 200 in 254ms
+ ✓ Compiled in 110ms (285 modules)
+ GET /packages/lodash 200 in 222ms
+ ✓ Compiled in 134ms (285 modules)
+ ✓ Compiled in 133ms (285 modules)
+ GET /packages/lodash 200 in 267ms
+ ✓ Compiled in 154ms (285 modules)
+ ✓ Compiled in 147ms (285 modules)
+ GET /packages/lodash 200 in 357ms
+ ✓ Compiled in 250ms (285 modules)
+ ✓ Compiled in 186ms (285 modules)
+ ✓ Compiled in 261ms (285 modules)
+ GET /packages/lodash 200 in 501ms
+ ✓ Compiled in 231ms (285 modules)
+ ✓ Compiled in 250ms (285 modules)
+ GET /packages/lodash 200 in 480ms
+ ✓ Compiled in 211ms (285 modules)
+ ✓ Compiled in 271ms (285 modules)
+ GET /packages/lodash 200 in 481ms
+ ✓ Compiled in 215ms (285 modules)
+ ✓ Compiled in 262ms (285 modules)
+ GET /packages/lodash 200 in 465ms
+ ✓ Compiled in 232ms (285 modules)
+ GET /packages/lodash 200 in 504ms
+ ✓ Compiled in 295ms (285 modules)
+ ✓ Compiled in 338ms (285 modules)
+ ✓ Compiled in 363ms (285 modules)
+ GET /packages/lodash 200 in 710ms
+ ✓ Compiled in 397ms (285 modules)
+ ✓ Compiled in 461ms (285 modules)
+ GET /packages/lodash 200 in 831ms
+ ✓ Compiled in 390ms (285 modules)
+ ✓ Compiled in 434ms (285 modules)
+ GET /packages/lodash 200 in 794ms
+ ✓ Compiled in 478ms (285 modules)
+ ✓ Compiled in 440ms (285 modules)
+ GET /packages/lodash 200 in 903ms
+ ✓ Compiled in 468ms (285 modules)
+ ✓ Compiled in 484ms (285 modules)
+ GET /packages/lodash 200 in 950ms
+ ✓ Compiled in 279ms (285 modules)
+ ✓ Compiled in 370ms (285 modules)
+ GET /packages/lodash 200 in 445ms
+ ✓ Compiled in 297ms (285 modules)
+ ✓ Compiled in 316ms (285 modules)
+ GET /packages/lodash 200 in 629ms
+ ✓ Compiled in 373ms (285 modules)
+ GET /packages/lodash 200 in 703ms
+ ✓ Compiled in 414ms (285 modules)
+ ✓ Compiled in 356ms (285 modules)
+ GET /packages/lodash 200 in 805ms
+ ✓ Compiled in 503ms (285 modules)
+ ✓ Compiled in 301ms (285 modules)
+ GET /packages/lodash 200 in 741ms
+ ✓ Compiled in 445ms (285 modules)
+ ✓ Compiled in 325ms (285 modules)
+ ✓ Compiled in 358ms (285 modules)
+ GET /packages/lodash 200 in 640ms
+ ✓ Compiled in 312ms (285 modules)
+ ✓ Compiled in 421ms (285 modules)
+ GET /packages/lodash 200 in 723ms
+ ✓ Compiled in 346ms (285 modules)
+ ✓ Compiled in 416ms (285 modules)
+ GET /packages/lodash 200 in 756ms
+ ✓ Compiled in 471ms (285 modules)
+ ✓ Compiled in 375ms (285 modules)
+ ✓ Compiled in 548ms (285 modules)
+ GET /packages/lodash 200 in 1035ms
+ ✓ Compiled in 383ms (285 modules)
+ ✓ Compiled in 440ms (285 modules)
+ ✓ Compiled in 329ms (285 modules)
+ GET /packages/lodash 200 in 846ms
+ ✓ Compiled in 285ms (285 modules)
+ ✓ Compiled in 371ms (285 modules)
+ GET /packages/lodash 200 in 672ms
+ ✓ Compiled in 279ms (285 modules)
+ ✓ Compiled in 398ms (285 modules)
+ GET /packages/lodash 200 in 460ms
+ ✓ Compiled in 257ms (285 modules)
+ ✓ Compiled in 329ms (285 modules)
+ GET /packages/lodash 200 in 444ms
+ ✓ Compiled in 293ms (285 modules)
+ ✓ Compiled in 355ms (285 modules)
+ GET /packages/lodash 200 in 577ms
+ ✓ Compiled in 239ms (285 modules)
+ ✓ Compiled in 305ms (285 modules)
+ GET /packages/lodash 200 in 503ms
+ ✓ Compiled in 254ms (285 modules)
+ ✓ Compiled in 245ms (285 modules)
+ ✓ Compiled in 326ms (285 modules)
+ GET /packages/lodash 200 in 656ms
+ ✓ Compiled in 252ms (285 modules)
+ ✓ Compiled in 291ms (285 modules)
+ ✓ Compiled in 302ms (285 modules)
+ GET /packages/lodash 200 in 671ms
+ ✓ Compiled in 253ms (285 modules)
+ ✓ Compiled in 323ms (285 modules)
+ GET /packages/lodash 200 in 556ms
+ ✓ Compiled in 242ms (285 modules)
+ ✓ Compiled in 331ms (285 modules)
+ GET /packages/lodash 200 in 543ms
+ ✓ Compiled in 285ms (285 modules)
+ ✓ Compiled in 315ms (285 modules)
+ GET /packages/lodash 200 in 571ms
+ ✓ Compiled in 281ms (285 modules)
+ GET /packages/lodash 200 in 550ms
+ ✓ Compiled in 307ms (285 modules)
+ ✓ Compiled in 270ms (285 modules)
+ GET /packages/lodash 200 in 682ms
+ ✓ Compiled in 416ms (285 modules)
+ ✓ Compiled in 258ms (285 modules)
+ ✓ Compiled in 316ms (285 modules)
+ GET /packages/lodash 200 in 570ms
+ ✓ Compiled in 324ms (285 modules)
+ ✓ Compiled in 305ms (285 modules)
+ GET /packages/lodash 200 in 577ms
+ ✓ Compiled in 223ms (285 modules)
+ ✓ Compiled in 347ms (285 modules)
+ GET /packages/lodash 200 in 561ms
+ ✓ Compiled in 267ms (285 modules)
+ ✓ Compiled in 323ms (285 modules)
+ GET /packages/lodash 200 in 564ms
+ ✓ Compiled in 249ms (285 modules)
+ GET /packages/lodash 200 in 533ms
+ ✓ Compiled in 332ms (285 modules)
+ ✓ Compiled in 247ms (285 modules)
+ GET /packages/lodash 200 in 510ms
+ ✓ Compiled in 297ms (285 modules)
+ ✓ Compiled in 263ms (285 modules)
+ GET /packages/lodash 200 in 540ms
+ ✓ Compiled in 329ms (285 modules)
+ ✓ Compiled in 225ms (285 modules)
+ GET /packages/lodash 200 in 574ms
+ ✓ Compiled in 360ms (285 modules)
+ ✓ Compiled in 448ms (285 modules)
+ GET /packages/lodash 200 in 681ms
+ ✓ Compiled in 242ms (285 modules)
+ ✓ Compiled in 361ms (285 modules)
+ GET /packages/lodash 200 in 604ms
+ ✓ Compiled in 270ms (285 modules)
+ ✓ Compiled in 367ms (285 modules)
+ GET /packages/lodash 200 in 454ms
+ ✓ Compiled in 250ms (285 modules)
+ ✓ Compiled in 341ms (285 modules)
+ GET /packages/lodash 200 in 564ms
+ ✓ Compiled in 258ms (285 modules)
+ ✓ Compiled in 429ms (285 modules)
+ GET /packages/lodash 200 in 513ms
+ ✓ Compiled in 289ms (285 modules)
+ ✓ Compiled in 570ms (285 modules)
+ GET /packages/lodash 200 in 821ms
+ ✓ Compiled in 267ms (285 modules)
+ ✓ Compiled in 322ms (285 modules)
+ GET /packages/lodash 200 in 557ms
+ ✓ Compiled in 289ms (285 modules)
+ ✓ Compiled in 384ms (285 modules)
+ GET /packages/lodash 200 in 675ms
+ ✓ Compiled in 280ms (285 modules)
+ ✓ Compiled in 299ms (285 modules)
+ GET /packages/lodash 200 in 574ms
+ ✓ Compiled in 265ms (285 modules)
+ ✓ Compiled in 338ms (285 modules)
+ GET /packages/lodash 200 in 582ms
+ ✓ Compiled in 291ms (285 modules)
+ GET /packages/lodash 200 in 551ms
+ ✓ Compiled in 315ms (285 modules)
+ ✓ Compiled in 258ms (285 modules)
+ GET /packages/lodash 200 in 557ms
+ ✓ Compiled in 317ms (285 modules)
+ ✓ Compiled in 227ms (285 modules)
+ ✓ Compiled in 316ms (285 modules)
+ GET /packages/lodash 200 in 539ms
+ ✓ Compiled in 258ms (285 modules)
+ ✓ Compiled in 296ms (285 modules)
+ GET /packages/lodash 200 in 549ms
+ ✓ Compiled in 270ms (285 modules)
+ ✓ Compiled in 338ms (285 modules)
+ GET /packages/lodash 200 in 586ms
+ ✓ Compiled in 256ms (285 modules)
+ ✓ Compiled in 305ms (285 modules)
+ GET /packages/lodash 200 in 578ms
+ ✓ Compiled in 244ms (285 modules)
+ ✓ Compiled in 331ms (285 modules)
+ GET /packages/lodash 200 in 583ms
+ ✓ Compiled in 231ms (285 modules)
+ ✓ Compiled in 336ms (285 modules)
+ GET /packages/lodash 200 in 546ms
+ ✓ Compiled in 282ms (285 modules)
+ ✓ Compiled in 353ms (285 modules)
+ GET /packages/lodash 200 in 627ms
+ ✓ Compiled in 263ms (285 modules)
+ ✓ Compiled in 328ms (285 modules)
+ GET /packages/lodash 200 in 592ms
+ ✓ Compiled in 275ms (285 modules)
+ GET /packages/lodash 200 in 597ms
+ ✓ Compiled in 368ms (285 modules)
+ ✓ Compiled in 257ms (285 modules)
+ ✓ Compiled in 286ms (285 modules)
+ GET /packages/lodash 200 in 517ms
+ ✓ Compiled in 268ms (285 modules)
+ ✓ Compiled in 312ms (285 modules)
+ GET /packages/lodash 200 in 592ms
+ ✓ Compiled in 222ms (285 modules)
+ ✓ Compiled in 313ms (285 modules)
+ GET /packages/lodash 200 in 556ms
+ ✓ Compiled in 309ms (285 modules)
+ ✓ Compiled in 287ms (285 modules)
+ GET /packages/lodash 200 in 562ms
+ ✓ Compiled in 250ms (285 modules)
+ GET /packages/lodash 200 in 499ms
+ ✓ Compiled in 291ms (285 modules)
+ ✓ Compiled in 212ms (285 modules)
+ ✓ Compiled in 314ms (285 modules)
+ GET /packages/lodash 200 in 521ms
+ ✓ Compiled in 280ms (285 modules)
+ ✓ Compiled in 290ms (285 modules)
+ GET /packages/lodash 200 in 550ms
+ ✓ Compiled in 270ms (285 modules)
+ GET /packages/lodash 200 in 550ms
+ ✓ Compiled in 311ms (285 modules)
+ ✓ Compiled in 242ms (285 modules)
+ GET /packages/lodash 200 in 524ms
+ ✓ Compiled in 306ms (285 modules)
+ ✓ Compiled in 284ms (285 modules)
+ GET /packages/lodash 200 in 658ms
+ ✓ Compiled in 383ms (285 modules)
+ ✓ Compiled in 223ms (285 modules)
+ ✓ Compiled in 341ms (285 modules)
+ GET /packages/lodash 200 in 581ms
+ ✓ Compiled in 236ms (285 modules)
+ ✓ Compiled in 284ms (285 modules)
+ GET /packages/lodash 200 in 524ms
+ ✓ Compiled in 299ms (285 modules)
+ ✓ Compiled in 330ms (285 modules)
+ GET /packages/lodash 200 in 612ms
+ ✓ Compiled in 260ms (285 modules)
+ ✓ Compiled in 315ms (285 modules)
+ GET /packages/lodash 200 in 567ms
+ ✓ Compiled in 266ms (285 modules)
+ ✓ Compiled in 303ms (285 modules)
+ GET /packages/lodash 200 in 554ms
+ ✓ Compiled in 263ms (285 modules)
+ GET /packages/lodash 200 in 552ms
+ ✓ Compiled in 315ms (285 modules)
+ ✓ Compiled in 268ms (285 modules)
+ ✓ Compiled in 326ms (285 modules)
+ GET /packages/lodash 200 in 569ms
+ ✓ Compiled in 713ms (285 modules)
+ ✓ Compiled in 563ms (285 modules)
+ GET /packages/lodash 200 in 1312ms
+ ✓ Compiled in 294ms (285 modules)
+ GET /packages/lodash 200 in 567ms
+ ✓ Compiled in 350ms (285 modules)
+ ✓ Compiled in 310ms (285 modules)
+ ✓ Compiled in 504ms (285 modules)
+ GET /packages/lodash 200 in 853ms
+ ✓ Compiled in 332ms (285 modules)
+ ✓ Compiled in 447ms (285 modules)
+ GET /packages/lodash 200 in 748ms
+ ✓ Compiled in 177ms (285 modules)
+ ✓ Compiled in 157ms (285 modules)
+ GET /packages/lodash 200 in 217ms
+ ✓ Compiled in 169ms (285 modules)
+ ✓ Compiled in 170ms (285 modules)
+ GET /packages/lodash 200 in 319ms
+ ✓ Compiled in 128ms (285 modules)
+ ✓ Compiled in 160ms (285 modules)
+ GET /packages/lodash 200 in 276ms
+ ✓ Compiled in 148ms (285 modules)
+ ✓ Compiled in 181ms (285 modules)
+ GET /packages/lodash 200 in 309ms
+ ✓ Compiled in 114ms (285 modules)
+ GET /packages/lodash 200 in 241ms
+ ✓ Compiled in 149ms (285 modules)
+ ✓ Compiled in 135ms (285 modules)
+ GET /packages/lodash 200 in 280ms
+ ✓ Compiled in 161ms (285 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/packages/lodash'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.7s (1054 modules)
+ ✓ Compiled in 105ms (438 modules)
+ GET /packages/lodash 500 in 3400ms
+ ✓ Compiled in 332ms (438 modules)
+ ✓ Compiled in 274ms (438 modules)
+ GET /packages/lodash 200 in 270ms
+ ✓ Compiled in 126ms (438 modules)
+ ✓ Compiled in 142ms (438 modules)
+ GET /packages/lodash 200 in 246ms
+ ✓ Compiled in 124ms (438 modules)
+ GET /packages/lodash 200 in 322ms
+ ✓ Compiled in 231ms (438 modules)
+ ✓ Compiled in 158ms (438 modules)
+ GET /packages/lodash 200 in 181ms
+ ✓ Compiled in 120ms (438 modules)
+ GET /packages/lodash 200 in 259ms
+ ✓ Compiled in 168ms (438 modules)
+ ✓ Compiled in 129ms (438 modules)
+ GET /packages/lodash 200 in 274ms
+ ✓ Compiled in 175ms (438 modules)
+ ✓ Compiled in 146ms (438 modules)
+ GET /packages/lodash 200 in 166ms
+ ✓ Compiled in 113ms (438 modules)
+ GET /packages/lodash 200 in 236ms
+ ✓ Compiled in 141ms (438 modules)
+ ✓ Compiled in 151ms (438 modules)
+ GET /packages/lodash 200 in 147ms
+ ✓ Compiled in 105ms (438 modules)
+ GET /packages/lodash 200 in 220ms
+ ✓ Compiled in 141ms (438 modules)
+ ✓ Compiled in 133ms (438 modules)
+ GET /packages/lodash 200 in 153ms
+ ✓ Compiled in 110ms (438 modules)
+ GET /packages/lodash 200 in 232ms
+ ✓ Compiled in 147ms (438 modules)
+ ✓ Compiled in 152ms (438 modules)
+ GET /packages/lodash 200 in 167ms
+ ✓ Compiled in 105ms (438 modules)
+ GET /packages/lodash 200 in 224ms
+ ✓ Compiled in 148ms (438 modules)
+ ✓ Compiled in 144ms (438 modules)
+ GET /packages/lodash 200 in 162ms
+ ✓ Compiled in 119ms (438 modules)
+ GET /packages/lodash 200 in 292ms
+ ✓ Compiled in 201ms (438 modules)
+ ✓ Compiled in 134ms (438 modules)
+ GET /packages/lodash 200 in 262ms
+ ✓ Compiled in 152ms (438 modules)
+ ✓ Compiled in 142ms (438 modules)
+ GET /packages/lodash 200 in 158ms
+ ✓ Compiled in 113ms (438 modules)
+ GET /packages/lodash 200 in 240ms
+ ✓ Compiled in 156ms (438 modules)
+ ✓ Compiled in 157ms (438 modules)
+ GET /packages/lodash 200 in 180ms
+ ✓ Compiled in 121ms (438 modules)
+ GET /packages/lodash 200 in 244ms
+ ✓ Compiled in 152ms (438 modules)
+ ✓ Compiled in 139ms (438 modules)
+ GET /packages/lodash 200 in 158ms
+ ✓ Compiled in 107ms (438 modules)
+ GET /packages/lodash 200 in 237ms
+ ✓ Compiled in 153ms (438 modules)
+ ✓ Compiled in 150ms (438 modules)
+ GET /packages/lodash 200 in 165ms
+ ✓ Compiled in 112ms (438 modules)
+ GET /packages/lodash 200 in 238ms
+ ✓ Compiled in 163ms (438 modules)
+ ✓ Compiled in 145ms (438 modules)
+ GET /packages/lodash 200 in 171ms
+ ✓ Compiled in 113ms (438 modules)
+ GET /packages/lodash 200 in 215ms
+ ✓ Compiled in 134ms (438 modules)
+ ✓ Compiled in 180ms (438 modules)
+ GET /packages/lodash 200 in 179ms
+ ✓ Compiled in 95ms (438 modules)
+ ✓ Compiled in 142ms (438 modules)
+ GET /packages/lodash 200 in 220ms
+ ✓ Compiled in 112ms (438 modules)
+ GET /packages/lodash 200 in 231ms
+ ✓ Compiled in 135ms (438 modules)
+ ✓ Compiled in 138ms (438 modules)
+ GET /packages/lodash 200 in 163ms
+ ✓ Compiled in 116ms (438 modules)
+ GET /packages/lodash 200 in 237ms
+ ✓ Compiled in 144ms (438 modules)
+ ✓ Compiled in 147ms (438 modules)
+ GET /packages/lodash 200 in 166ms
+ ✓ Compiled in 116ms (438 modules)
+ GET /packages/lodash 200 in 234ms
+ ✓ Compiled in 146ms (438 modules)
+ ✓ Compiled in 126ms (438 modules)
+ GET /packages/lodash 200 in 266ms
+ ✓ Compiled in 164ms (438 modules)
+ ✓ Compiled in 148ms (438 modules)
+ GET /packages/lodash 200 in 169ms
+ ✓ Compiled in 114ms (438 modules)
+ ✓ Compiled in 153ms (438 modules)
+ GET /packages/lodash 200 in 241ms
+ ✓ Compiled in 105ms (438 modules)
+ GET /packages/lodash 200 in 229ms
+ ✓ Compiled in 143ms (438 modules)
+ ✓ Compiled in 132ms (438 modules)
+ GET /packages/lodash 200 in 150ms
+ ✓ Compiled in 109ms (438 modules)
+ GET /packages/lodash 200 in 243ms
+ ✓ Compiled in 164ms (438 modules)
+ ✓ Compiled in 127ms (438 modules)
+ GET /packages/lodash 200 in 144ms
+ ✓ Compiled in 122ms (438 modules)
+ GET /packages/lodash 200 in 231ms
+ ✓ Compiled in 137ms (438 modules)
+ ✓ Compiled in 135ms (438 modules)
+ GET /packages/lodash 200 in 153ms
+ ✓ Compiled in 106ms (438 modules)
+ GET /packages/lodash 200 in 229ms
+ ✓ Compiled in 150ms (438 modules)
+ ✓ Compiled in 157ms (438 modules)
+ GET /packages/lodash 200 in 176ms
+ ✓ Compiled in 109ms (438 modules)
+ GET /packages/lodash 200 in 217ms
+ ✓ Compiled in 133ms (438 modules)
+ ✓ Compiled in 138ms (438 modules)
+ GET /packages/lodash 200 in 159ms
+ ✓ Compiled in 111ms (438 modules)
+ GET /packages/lodash 200 in 209ms
+ ✓ Compiled in 142ms (438 modules)
+ ✓ Compiled in 147ms (438 modules)
+ GET /packages/lodash 200 in 166ms
+ ✓ Compiled in 112ms (438 modules)
+ GET /packages/lodash 200 in 238ms
+ ✓ Compiled in 151ms (438 modules)
+ ✓ Compiled in 137ms (438 modules)
+ GET /packages/lodash 200 in 156ms
+ ✓ Compiled in 132ms (438 modules)
+ GET /packages/lodash 200 in 307ms
+ ✓ Compiled in 190ms (438 modules)
+ ✓ Compiled in 143ms (438 modules)
+ GET /packages/lodash 200 in 166ms
+ ✓ Compiled in 136ms (438 modules)
+ GET /packages/lodash 200 in 265ms
+ ✓ Compiled in 235ms (438 modules)
+ GET /packages/lodash 200 in 89ms
+ ✓ Compiled in 111ms (438 modules)
+ GET /packages/lodash 200 in 219ms
+ ✓ Compiled in 138ms (438 modules)
+ ✓ Compiled in 135ms (438 modules)
+ GET /packages/lodash 200 in 153ms
+ ✓ Compiled in 110ms (438 modules)
+ GET /packages/lodash 200 in 219ms
+ ✓ Compiled in 135ms (438 modules)
+ ✓ Compiled in 141ms (438 modules)
+ GET /packages/lodash 200 in 158ms
+ ✓ Compiled in 110ms (438 modules)
+ GET /packages/lodash 200 in 229ms
+ ✓ Compiled in 149ms (438 modules)
+ ✓ Compiled in 142ms (438 modules)
+ GET /packages/lodash 200 in 168ms
+ ✓ Compiled in 122ms (438 modules)
+ GET /packages/lodash 200 in 228ms
+ ✓ Compiled in 135ms (438 modules)
+ ✓ Compiled in 138ms (438 modules)
+ GET /packages/lodash 200 in 155ms
+ ✓ Compiled in 102ms (438 modules)
+ GET /packages/lodash 200 in 240ms
+ ✓ Compiled in 164ms (438 modules)
+ ✓ Compiled in 146ms (438 modules)
+ GET /packages/lodash 200 in 162ms
+ ✓ Compiled in 131ms (438 modules)
+ GET /packages/lodash 200 in 239ms
+ ✓ Compiled in 138ms (438 modules)
+ ✓ Compiled in 120ms (438 modules)
+ GET /packages/lodash 200 in 248ms
+ ✓ Compiled in 157ms (438 modules)
+ ✓ Compiled in 141ms (438 modules)
+ GET /packages/lodash 200 in 162ms
+ ✓ Compiled in 112ms (438 modules)
+ GET /packages/lodash 200 in 225ms
+ ✓ Compiled in 137ms (438 modules)
+ ✓ Compiled in 135ms (438 modules)
+ GET /packages/lodash 200 in 156ms
+ ✓ Compiled in 130ms (438 modules)
+ GET /packages/lodash 200 in 289ms
+ ✓ Compiled in 190ms (438 modules)
+ ✓ Compiled in 155ms (438 modules)
+ GET /packages/lodash 200 in 187ms
+ ✓ Compiled in 112ms (438 modules)
+ GET /packages/lodash 200 in 211ms
+ ✓ Compiled in 151ms (438 modules)
+ ✓ Compiled in 141ms (438 modules)
+ GET /packages/lodash 200 in 163ms
+ ✓ Compiled in 130ms (438 modules)
+ GET /packages/lodash 200 in 263ms
+ ✓ Compiled in 160ms (438 modules)
+ ✓ Compiled in 154ms (438 modules)
+ GET /packages/lodash 200 in 174ms
+ ✓ Compiled in 109ms (438 modules)
+ GET /packages/lodash 200 in 227ms
+ ✓ Compiled in 152ms (438 modules)
+ ✓ Compiled in 174ms (438 modules)
+ GET /packages/lodash 200 in 195ms
+ ✓ Compiled in 137ms (438 modules)
+ ✓ Compiled in 217ms (438 modules)
+ GET /packages/lodash 200 in 325ms
+ ✓ Compiled in 113ms (438 modules)
+ GET /packages/lodash 200 in 237ms
+ ✓ Compiled in 146ms (438 modules)
+ ✓ Compiled in 139ms (438 modules)
+ GET /packages/lodash 200 in 166ms
+ ✓ Compiled in 126ms (438 modules)
+ GET /packages/lodash 200 in 245ms
+ ✓ Compiled in 158ms (438 modules)
+ ✓ Compiled in 182ms (438 modules)
+ GET /packages/lodash 200 in 216ms
+ ✓ Compiled in 131ms (438 modules)
+ GET /packages/lodash 200 in 238ms
+ ✓ Compiled in 164ms (438 modules)
+ ✓ Compiled in 167ms (438 modules)
+ GET /packages/lodash 200 in 198ms
+ ✓ Compiled in 124ms (438 modules)
+ GET /packages/lodash 200 in 246ms
+ ✓ Compiled in 171ms (438 modules)
+ ✓ Compiled in 163ms (438 modules)
+ GET /packages/lodash 200 in 192ms
+ ✓ Compiled in 131ms (438 modules)
+ ✓ Compiled in 239ms (438 modules)
+ GET /packages/lodash 200 in 359ms
+ ✓ Compiled in 190ms (438 modules)
+ GET /packages/lodash 200 in 318ms
+ ✓ Compiled in 157ms (438 modules)
+ ✓ Compiled in 142ms (438 modules)
+ GET /packages/lodash 200 in 157ms
+ ✓ Compiled in 124ms (438 modules)
+ GET /packages/lodash 200 in 249ms
+ ✓ Compiled in 151ms (438 modules)
+ ✓ Compiled in 141ms (438 modules)
+ GET /packages/lodash 200 in 160ms
+ ✓ Compiled in 105ms (438 modules)
+ GET /packages/lodash 200 in 202ms
+ ✓ Compiled in 133ms (438 modules)
+ ✓ Compiled in 139ms (438 modules)
+ GET /packages/lodash 200 in 156ms
+ ✓ Compiled in 110ms (438 modules)
+ GET /packages/lodash 200 in 227ms
+ ✓ Compiled in 135ms (438 modules)
+ ✓ Compiled in 129ms (438 modules)
+ GET /packages/lodash 200 in 158ms
+ ✓ Compiled in 129ms (438 modules)
+ GET /packages/lodash 200 in 259ms
+ ✓ Compiled in 172ms (438 modules)
+ ✓ Compiled in 155ms (438 modules)
+ GET /packages/lodash 200 in 174ms
+ ✓ Compiled in 114ms (438 modules)
+ GET /packages/lodash 200 in 215ms
+ ✓ Compiled in 151ms (438 modules)
+ ✓ Compiled in 156ms (438 modules)
+ GET /packages/lodash 200 in 185ms
+ ✓ Compiled in 111ms (438 modules)
+ GET /packages/lodash 200 in 228ms
+ ✓ Compiled in 146ms (438 modules)
+ ✓ Compiled in 149ms (438 modules)
+ GET /packages/lodash 200 in 168ms
+ ✓ Compiled in 114ms (438 modules)
+ GET /packages/lodash 200 in 228ms
+ ✓ Compiled in 160ms (438 modules)
+ ✓ Compiled in 133ms (438 modules)
+ GET /packages/lodash 200 in 161ms
+ ✓ Compiled in 103ms (438 modules)
+ GET /packages/lodash 200 in 207ms
+ ✓ Compiled in 149ms (438 modules)
+ ✓ Compiled in 161ms (438 modules)
+ GET /packages/lodash 200 in 183ms
+ ✓ Compiled in 123ms (438 modules)
+ GET /packages/lodash 200 in 228ms
+ ✓ Compiled in 140ms (438 modules)
+ ✓ Compiled in 144ms (438 modules)
+ GET /packages/lodash 200 in 164ms
+ ✓ Compiled in 112ms (438 modules)
+ GET /packages/lodash 200 in 229ms
+ ✓ Compiled in 147ms (438 modules)
+ ✓ Compiled in 145ms (438 modules)
+ GET /packages/lodash 200 in 167ms
+ ✓ Compiled in 116ms (438 modules)
+ GET /packages/lodash 200 in 231ms
+ ✓ Compiled in 150ms (438 modules)
+ ✓ Compiled in 133ms (438 modules)
+ GET /packages/lodash 200 in 158ms
+ ✓ Compiled in 111ms (438 modules)
+ GET /packages/lodash 200 in 277ms
+ ✓ Compiled in 195ms (438 modules)
+ ✓ Compiled in 142ms (438 modules)
+ GET /packages/lodash 200 in 162ms
+ ✓ Compiled in 131ms (438 modules)
+ GET /packages/lodash 200 in 236ms
+ ✓ Compiled in 161ms (438 modules)
+ ✓ Compiled in 162ms (438 modules)
+ GET /packages/lodash 200 in 192ms
+ ✓ Compiled in 119ms (438 modules)
+ ✓ Compiled in 132ms (438 modules)
+ GET /packages/lodash 200 in 227ms
+ ✓ Compiled in 102ms (438 modules)
+ GET /packages/lodash 200 in 223ms
+ ✓ Compiled in 154ms (438 modules)
+ ✓ Compiled in 146ms (438 modules)
+ GET /packages/lodash 200 in 174ms
+ ✓ Compiled in 126ms (438 modules)
+ GET /packages/lodash 200 in 260ms
+ ✓ Compiled in 161ms (438 modules)
+ ✓ Compiled in 153ms (438 modules)
+ GET /packages/lodash 200 in 176ms
+ ✓ Compiled in 114ms (438 modules)
+ GET /packages/lodash 200 in 240ms
+ ✓ Compiled in 155ms (438 modules)
+ ✓ Compiled in 158ms (438 modules)
+ GET /packages/lodash 200 in 182ms
+ ✓ Compiled in 126ms (438 modules)
+ GET /packages/lodash 200 in 232ms
+ ✓ Compiled in 133ms (438 modules)
+ ✓ Compiled in 187ms (438 modules)
+ GET /packages/lodash 200 in 204ms
+ ✓ Compiled in 134ms (438 modules)
+ GET /packages/lodash 200 in 256ms
+ ✓ Compiled in 161ms (438 modules)
+ ✓ Compiled in 154ms (438 modules)
+ GET /packages/lodash 200 in 180ms
+ ✓ Compiled in 129ms (438 modules)
+ GET /packages/lodash 200 in 264ms
+ ✓ Compiled in 168ms (438 modules)
+ ✓ Compiled in 143ms (438 modules)
+ GET /packages/lodash 200 in 167ms
+ ✓ Compiled in 116ms (438 modules)
+ GET /packages/lodash 200 in 253ms
+ ✓ Compiled in 164ms (438 modules)
+ ✓ Compiled in 152ms (438 modules)
+ GET /packages/lodash 200 in 179ms
+ ✓ Compiled in 114ms (438 modules)
+ GET /packages/lodash 200 in 242ms
+ ✓ Compiled in 150ms (438 modules)
+ ✓ Compiled in 173ms (438 modules)
+ GET /packages/lodash 200 in 176ms
+ ✓ Compiled in 107ms (438 modules)
+ GET /packages/lodash 200 in 237ms
+ ✓ Compiled in 164ms (438 modules)
