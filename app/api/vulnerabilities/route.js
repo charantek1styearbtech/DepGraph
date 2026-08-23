@@ -19,6 +19,13 @@ export const GET = route(async (request) => {
     severity,
     limit: pageSize,
     offset: (page - 1) * pageSize,
+    activeOnly: params.get("activeOnly") === "1" || params.get("activeOnly") === "true",
   });
-  return Response.json({ ...result, severity, page, pageSize });
+  return Response.json({
+    ...result,
+    severity,
+    page,
+    pageSize,
+    activeOnly: result.activeOnly,
+  });
 });
