@@ -2,8 +2,10 @@
 //
 // Skips automatically (with a notice) when COGNODB_* credentials are absent
 // or the instance is unreachable, so `npm test` stays green offline.
+// The connectivity probe runs at module top level because describe.skipIf()
+// is evaluated during collection — before any beforeAll could run.
 
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, describe, expect, it } from "vitest";
 
 import { checkConnection, closeDriver } from "../lib/db.js";
 import { getDashboardStats } from "../lib/queries/dashboard.js";
@@ -19,23 +21,20 @@ import { searchEntities } from "../lib/queries/search.js";
 
 const FLAGSHIP_CVE = "CVE-DEMO-2026-001"; // lodash 4.17.21 prototype pollution
 
-let online = false;
+const online = await checkConnection();
 
-beforeAll(async () => {
-  online = await checkConnection();
-  if (!online) {
-    console.warn(
-      "\n⚠ CognoDB unreachable — live query tests skipped. " +
-        "Configure .env.local and run `npm run seed` to exercise them.\n",
-    );
-  }
-});
+if (!online) {
+  console.warn(
+    "\n⚠ CognoDB unreachable — live query tests skipped. " +
+      "Configure .env.local and run `npm run seed` to exercise them.\n",
+  );
+}
 
 afterAll(async () => {
   if (online) await closeDriver();
 });
 
-describe.skipIf(() => !online)("query layer (live CognoDB)", () => {
+describe.skipIf(!online)("query layer (live CognoDB)", () => {
   it("dashboard stats reflect the seeded graph", async () => {
     const stats = await getDashboardStats();
     expect(stats.projects).toBe(20);
@@ -59,7 +58,17 @@ describe.skipIf(() => !online)("query layer (live CognoDB)", () => {
     expect(impact.vulnerability.packageId).toBe("lodash");
     expect(impact.vulnerability.versionNumber).toBe("4.17.21");
     expect(impact.reach.direct).toBe(false);
-    expect(impact.reach.minHops).toBeGreaterThanOrEqual(3);
+    // Shortest route runs through ShopStack's DIRECT recharts@2.12.2 pin…
+    expect(impact.reach.minHops).toBe(2);
+    expect(impact.reach.pathCount).toBeGreaterThan(1);
+    // …while the assignment's canonical deep chain also exists among paths:
+    // next ▸ webpack ▸ package-x ▸ lodash.
+    const hasDeepChain = impact.paths.some(
+      (path) =>
+        path.steps.some((step) => step.label === "webpack") &&
+        path.steps.some((step) => step.label === "package-x"),
+    );
+    expect(hasDeepChain).toBe(true);
     expect(impact.paths[0].steps[0].type).toBe("project");
     const last = impact.paths[0].steps.at(-1);
     expect(last.id).toBe("lodash");
@@ -111,7 +120,10 @@ describe.skipIf(() => !online)("query layer (live CognoDB)", () => {
   it("global search categorizes results", async () => {
     const results = await searchEntities("lodash");
     expect(results.packages.some((r) => r.id === "lodash")).toBe(true);
-    expect(results.projects.length).toBeGreaterThan(0);
     expect(results.vulnerabilities.length).toBeGreaterThan(0);
+
+    // No project is named after lodash, so project matches need their own probe.
+    const shop = await searchEntities("shop");
+    expect(shop.projects.length).toBeGreaterThan(0);
   });
 });

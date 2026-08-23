@@ -37,13 +37,6 @@ function main() {
 
   const { nodes, rels } = dataset;
 
-  // Scenario helper: which projects can reach a given version node?
-  const dependentsOf = new Map();
-  for (const edge of rels.dependsOn) {
-    if (!dependentsOf.has(edge.toPackageId)) dependentsOf.set(edge.toPackageId, []);
-    dependentsOf.get(edge.toPackageId).push(edge.fromVersionId);
-  }
-
   function projectReaches(projectId, targetVersionId, maxDepth = 10) {
     const directs = rels.directDependsOn.filter((d) => d.projectId === projectId);
     let frontier = directs.map((d) =>
@@ -82,9 +75,6 @@ function main() {
   for (const [name, result] of scenarios) {
     console.log(name.padEnd(45), result.found ? `reaches @ depth ${result.depth}` : "NOT REACHED");
     if (!result.found) fail.push(`scenario failed: ${name}`);
-  }
-  if (!projectReaches("cloudpilot", lodashVuln).found === false) {
-    // CloudPilot pins patched lodash BUT still reaches vulnerable lodash via next chain.
   }
 
   const affectedProjects = nodes.projects.filter(
